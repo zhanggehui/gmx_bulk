@@ -31,8 +31,8 @@ if [ $SLURM_JOB_NUM_NODES -eq 1 -a $Usempirun -eq 0 ] ; then
 else
     source /appsnew/mdapps/gromacs2019.2_intelmkl2019u4/bin/GMXRC2.bash
     #mpistring="mpirun -n $SLURM_NTASKS -quiet --mca pml ob1 --mca btl_openib_allow_ib true"
-    mpistring="mpirun -n 4 -ntmpi 1"
-    gmxrun="$mpistring mdrun_mpi"
+    mpistring="mpirun -np 4 "
+    gmxrun="$mpistring mdrun_mpi -ntomp 1"
     #gmxrun="$mpistring mdrun_mpi2"
 fi
 
