@@ -52,7 +52,6 @@ keyword="#SBATCH -e" ; newline="#SBATCH -e $ename"
 sed -i "/$keyword/c$newline" ./$scriptsdir/$submissionscript
 
 cp ./$scriptsdir/$runscript ./$rundir
-cp ./$scriptsdir/nvt-cycle.mdp ./$rundir
 cp ./$scriptsdir/$submissionscript ./$rundir
 
 sbatch ./$scriptsdir/$submissionscript
