@@ -1,1 +1,0 @@
-# Gmx_bulk
