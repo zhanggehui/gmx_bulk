@@ -1,5 +1,3 @@
-title                   = OPLS MXenen NVT equilibration 300k 1ns posre h-honds
-
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
 ; e.g.: -I/home/joe/doe -I/home/mary/roe
