@@ -1,5 +1,2 @@
-gmx grompp -f ./$scriptsdir/nvt-equ.mdp -c GO2-afterem.gro -p bulk_ion.top \
--o ./$rundir/nvt-equ.tpr -po ./$rundir/nvt-equ-out
-cd $rundir
+gmx grompp -f $scriptsdir/nvt-equ.mdp -c ../em/em.gro -p ../bulk_ion.top -o ./nvt-equ.tpr
 $gmxrun -v -deffnm nvt-equ
-cd ..

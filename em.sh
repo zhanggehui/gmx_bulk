@@ -1,5 +1,2 @@
-gmx grompp -f ./scripts/em.mdp  -c bulk_ion.gro -p bulk_ion.top -o ./$rundir/em.tpr -po ./$rundir/em-out
-cd $rundir
+gmx grompp -f $scriptsdir/em.mdp  -c ../bulk_ion.gro -p ../bulk_ion.top -o ./em.tpr
 $gmxrun -v -deffnm em
-cp -rf em.gro ../GO2-afterem.gro
-cd ..
