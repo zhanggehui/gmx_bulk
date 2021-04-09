@@ -3,6 +3,3 @@ function get_rdf() {
     gmx rdf -f nvt-equ.trr -n index.ndx -norm number_density -ref $1 -sel OW -selrpos atom -seltype atom -o $2 -b 0 -e 5000 -rmax 1
     rm -rf \#*
 }
-
-ions=("CS" "LI" "NA" "K")
-n_ions=${#ions[@]}
