@@ -8,7 +8,7 @@ for((i=0; i<$n_ions; i++)); do
     ion=${ions[$i]} 
     cd ./$ion/nvtequ
     xvgfile=${ion}.xvg
-    get_rdf $ion $xvgfile
+    get_rdf $ion $xvgfile 50000
     mv $xvgfile ../../$rundir
     rm -rf \#*
     cd ../../
