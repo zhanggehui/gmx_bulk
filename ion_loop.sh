@@ -12,7 +12,7 @@ for ((i=0;i<$n_ions;i++)); do
         gmx auto 4 /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts nvt-equ.sh nvtequ
     elif [ $1 == 'rdf' ]; then
         source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
-        gmx auto 1 /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts/analysis rdf_ion.sh rdf_bulk
+        gmx auto 1 /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts/analysis rdf_ion.sh $ion
     fi
     cd ../
 done

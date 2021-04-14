@@ -1,16 +1,11 @@
 source $scriptsdir/rdf_func.sh
 
-ions=("CS" "LI" "NA" "K")
-n_ions=${#ions[@]}
-
+cd ../nvtequ
+ion=$rundir
+xvgfile=${ion}.xvg
+get_rdf $ion $xvgfile 50000
+mv $xvgfile ../$rundir
+mv cn.xvg ../$rundir
 cd ../
-for((i=0; i<$n_ions; i++)); do
-    ion=${ions[$i]} 
-    cd ./$ion/nvtequ
-    xvgfile=${ion}.xvg
-    get_rdf $ion $xvgfile 50000
-    mv $xvgfile ../../$rundir
-    mv cn.xvg ../../$rundir
-    rm -rf \#*
-    cd ../../
-done
+
+mv ./$rundir ../tmp_data/$rundir
