@@ -9,7 +9,7 @@ integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.001
-nsteps                   = 50000000
+nsteps                   = 5000000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
@@ -128,16 +128,14 @@ tc-grps                  = System
 ; Time constant (ps) and reference temperature (K)
 tau_t                    = 0.1    
 ref_t                    = 300 
-; pressure coupling     
-pcoupl                   = no
-pcoupltype               = Isotropic
+; pressure coupling
+pcoupl                  = Parrinello-Rahman     ; Pressure coupling on in NPT
 nstpcouple               = -1
-; Time constant (ps), compressibility (1/bar) and reference P (bar)
-tau-p                    = 1
-compressibility          = 
-ref-p                    = 
-; Scaling of reference coordinates, No, All or COM
-refcoord-scaling         = No
+pcoupltype              = isotropic             ; uniform scaling of box vectors
+tau_p                   = 1.0                   ; time constant, in ps
+ref_p                   = 1.0                   ; reference pressure, in bar
+compressibility         = 4.5e-5                ; isothermal compressibility of water, bar^-1
+refcoord_scaling        = com
 
 ; OPTIONS FOR QMMM calculations
 QMMM                     = no
@@ -178,7 +176,7 @@ annealing-time           =
 annealing-temp           = 
 
 ; GENERATE VELOCITIES FOR STARTUP RUN
-gen_vel                  = no
+gen_vel                  = yes
 gen_temp                 = 300
 gen_seed                 = -1
 
@@ -187,7 +185,7 @@ constraints              = none
 ; Type of constraint algorithm
 constraint_algorithm     = lincs
 ; Do not constrain the start configuration
-continuation             = yes
+continuation             = no
 ; Use successive overrelaxation to reduce the number of shake iterations
 Shake-SOR                = no
 ; Relative tolerance of shake

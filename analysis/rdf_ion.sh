@@ -10,6 +10,7 @@ for((i=0; i<$n_ions; i++)); do
     xvgfile=${ion}.xvg
     get_rdf $ion $xvgfile 50000
     mv $xvgfile ../../$rundir
+    mv cn.xvg ../../$rundir
     rm -rf \#*
     cd ../../
 done
