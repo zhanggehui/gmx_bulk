@@ -1,4 +1,5 @@
 #### 能量最小化与平衡
+
 ```bash
 cd /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts; gitget; cd $OLDPWD; \
 source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
