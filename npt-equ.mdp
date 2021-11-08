@@ -130,7 +130,7 @@ tau_t                    = 0.1
 ref_t                    = 300 
 
 ; pressure coupling
-pcoupl                  = Parrinello-Rahman     ; Pressure coupling on in NPT
+pcoupl                  = Berendsen             ; Pressure coupling on in NPT
 nstpcouple               = -1
 pcoupltype              = isotropic             ; uniform scaling of box vectors
 tau_p                   = 1.0                   ; time constant, in ps
