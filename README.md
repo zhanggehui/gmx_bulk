@@ -26,6 +26,7 @@ gmx auto 1 /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts/analysis rdf
 
 ```bash
 cd /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts; gitget; cd $OLDPWD; \
-source /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts/ion_loop.sh npt cn_nl 4   # nvt rdf res_t
+source /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts/ion_loop.sh npt cn_nl 4   
+# em nvt npt rdf res_t
 ```
 

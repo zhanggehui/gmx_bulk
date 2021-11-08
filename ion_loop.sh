@@ -7,7 +7,10 @@ gmxrun="gmx $2 $3"
 for ((i=0; i<$n_ions; i++)); do
     ion=${ions[$i]}
     cd $ion
-        if [ $1 == 'npt' ]; then
+        if [ $1 == 'em' ]; then
+            source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
+            $gmxrun $sdir em.sh em
+        elif [ $1 == 'npt' ]; then
             source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
             $gmxrun $sdir npt-equ.sh nptequ
         elif [ $1 == 'nvt' ]; then
