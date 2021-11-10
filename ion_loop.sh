@@ -6,8 +6,8 @@ gmxrun="gmx $2 $3"
 
 for ((i=0; i<$n_ions; i++)); do
     ion=${ions[$i]}
-    ion=${ion%%_*}
     cd $ion
+        ion=${ion%%_*}
         if [ $1 == 'em' ]; then
             source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
             $gmxrun $sdir em.sh em
