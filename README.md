@@ -7,7 +7,11 @@ gmx cn_nl 1 /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts em.sh em
 
 cd /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts; gitget; cd $OLDPWD; \
 source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
-gmx cn_nl 4 /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts nvt-equ.sh nvtequ
+gmx cn_nl 6 /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts npt-equ.sh nptequ
+
+cd /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts; gitget; cd $OLDPWD; \
+source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
+gmx cn_nl 6 /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts nvt-equ.sh nvtequ
 ```
 
 
