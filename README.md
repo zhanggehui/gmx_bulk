@@ -35,6 +35,6 @@ cd /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts; gitget; cd $OLDPWD;
 source /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts/ion_loop.sh npt cn_nl 6
 
 cd /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts; gitget; cd $OLDPWD; \
-source /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts/ion_loop.sh res_t cn_nl 1
+source /home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts/ion_loop.sh rdf cn_nl 1
 # em nvt npt rdf res_t
 ```
