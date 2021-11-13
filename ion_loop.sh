@@ -1,4 +1,4 @@
-ions=("LI_opls390" "NA" "K" "CS")
+ions=("LI_opls385" "NA" "K" "CS")
 n_ions=${#ions[@]}
 
 sdir='/home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts'
