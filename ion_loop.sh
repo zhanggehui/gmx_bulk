@@ -1,4 +1,4 @@
-ions=("LI_opls385" "NA" "K" "CS")
+ions=("LI" "NA" "K" "CS")
 n_ions=${#ions[@]}
 
 sdir='/home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts'
@@ -11,6 +11,9 @@ for ((i=0; i<$n_ions; i++)); do
         if [ $1 == 'em' ]; then
             source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
             $gmxrun $sdir em.sh em
+        elif [ $1 == 'equ' ]; then
+            source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
+            $gmxrun $sdir equ.sh nptequ            
         elif [ $1 == 'npt' ]; then
             source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
             $gmxrun $sdir npt-equ.sh nptequ
