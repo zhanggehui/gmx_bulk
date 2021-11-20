@@ -1,4 +1,4 @@
-ions=("LI_opls395" "LI_opls396" "LI_opls397" "NA" "K" "CS")
+ions=("LI_opls396" "NA" "K" "CS")
 n_ions=${#ions[@]}
 
 sdir='/home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts'
@@ -25,7 +25,7 @@ for ((i=0; i<$n_ions; i++)); do
             $gmxrun $sdir/analysis rdf.sh ${ions[$i]}_rdf
         elif [ $1 == 'res_t' ]; then 
             source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
-            $gmxrun $sdir/analysis residence_time.sh ${ion}_restime
+            $gmxrun $sdir/analysis residence_time.sh ${ions[$i]}_restime
         fi
     cd ../
 done
