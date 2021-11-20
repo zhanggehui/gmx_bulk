@@ -22,7 +22,7 @@ for ((i=0; i<$n_ions; i++)); do
             $gmxrun $sdir nvt-equ.sh nvtequ
         elif [ $1 == 'rdf' ]; then
             source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
-            $gmxrun $sdir/analysis rdf.sh ${ion}_rdf
+            $gmxrun $sdir/analysis rdf.sh ${ions[$i]}_rdf
         elif [ $1 == 'res_t' ]; then 
             source /home/liufeng_pkuhpc/lustre2/zgh/sub_job/auto_run.sh \
             $gmxrun $sdir/analysis residence_time.sh ${ion}_restime
