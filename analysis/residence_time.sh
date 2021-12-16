@@ -1,7 +1,7 @@
 cd ../nvtequ
 
-ion=${rundir%%_*}
-echo -e "a OW\nq" | gmx make_ndx -f nvt-equ.gro
+# ion=${rundir%%_*}
+# echo -e "a OW\nq" | gmx make_ndx -f nvt-equ.gro
 
 mkdir ./select
 cd ./select
@@ -12,7 +12,7 @@ $gmx select -s ../nvt-equ.tpr -f ../nvt-equ.trr -n ../index.ndx -os -oc -oi -on 
 
 cd ../
 
-rm -rf index.ndx
+# rm -rf index.ndx
 mv ./select ../$rundir
 
 cd ../
