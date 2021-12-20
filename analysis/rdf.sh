@@ -8,7 +8,7 @@ cd ../nvtequ
 
 ion=${rundir%%_*}
 xvgfile=${ion}.xvg
-get_rdf $ion $xvgfile 20000
+get_rdf $ion $xvgfile 50000
 mv $xvgfile ../$rundir
 mv cn.xvg ../$rundir
 
