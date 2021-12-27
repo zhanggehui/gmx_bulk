@@ -1,6 +1,7 @@
 # ions=("LI_opls392" "LI_opls395" "LI_opls396" "LI_opls397" "LI_opls398" "NA" "K" "CS")
 # ions=("LI_opls392" "NA" "K" "CS")
-ions=("LI_opls406_0.75e" "LI_opls406_1e")
+# ions=("LI_opls406_0.75e" "LI_opls406_1e")
+ions=("LI_opls406_0.75e")
 n_ions=${#ions[@]}
 
 sdir='/home/liufeng_pkuhpc/lustre3/zgh/gmx/gmx_bulk/md_scripts'
